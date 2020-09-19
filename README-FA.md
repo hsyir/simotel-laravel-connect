@@ -1,3 +1,14 @@
+
+<div dir=rtl>
+
+# پکیح لاراول ارتباط با سیموتل
+
+</div> 
+
+[![Software License][ico-license]](LICENSE.md)
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Total Downloads on Packagist][ico-download]][link-packagist]
+
 <div dir=rtl>
 
 # پکیح لاراول ارتباط با سیموتل
@@ -221,7 +232,7 @@ class SmartApiController extends Controller
 
 ```
 
+## License
 
 
 
-[#simotel-api]: #laravel-payment-gateway
