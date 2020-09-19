@@ -3,6 +3,10 @@
 # پکیح لاراول ارتباط با سیموتل
 ارتباط با Simotel بوسیله لاراول
 
+- [Simotel Api][#simotel-api]
+- [Simotel Event Api][#Simotel-Event-Api]
+
+
 ## Simotel Api
 Simotel Api یکی از قابلیت های قدرتمند نرم افزار سیموتل است، بوسیله این Api میتوان برخی اعمال تعریف شده روی سیموتل را از راه دور و بوسیله فریمورک قدرتمند لاراول انجام داد.    
 </div> 
@@ -217,3 +221,6 @@ class SmartApiController extends Controller
 ```
 
 
+
+
+[#simotel-api]: #laravel-payment-gateway
