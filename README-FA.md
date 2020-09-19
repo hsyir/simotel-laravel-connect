@@ -3,9 +3,9 @@
 
 
 ## Simotel Api
-
+<div dir=rtl>
 Simotel Api یکی از قابلیت های قدرتمند نرم افزار سیموتل است، بوسیله این Api میتوان برخی اعمال تعریف شده روی سیموتل را از راه دور و بوسیله فریمورک قدرتمند لاراول انجام داد.    
-    
+</div>    
     boolean addToQueue($queue, $source, $agent, $penalty = 0)
     boolean removeFromQueue($queue, $agent)
     boolean pauseInQueue($queue, $agent)
