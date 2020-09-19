@@ -8,15 +8,19 @@
 - [Smart Api](#smart-api)
 
 ## نصب
-</div> 
-
 با استفاده از کامپوزر و لاراول 6 به بعد این پکیج را با فرمان زیر نصب کنید:
+
+</div> 
 
 ```
 composer require hsyir/simotel-laravel-connect
 ```
 
+<div dir=rtl>
+
 سپس به وسیله اجرای فرمان زیر فایل کانفیگ ساخته خواهد شد:
+
+</div> 
 
 ```
 php artisan vendor:publish --provider=Hsyir\\SimotelConnect\\SimotelApiServiceProvider
