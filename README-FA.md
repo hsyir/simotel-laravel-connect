@@ -10,9 +10,18 @@
 ## نصب
 </div> 
 
+با استفاده از کامپوزر و لاراول 6 به بعد این پکیج را با فرمان زیر نصب کنید:
+
 ```
 composer require hsyir/simotel-laravel-connect
 ```
+
+سپس به وسیله اجرای فرمان زیر فایل کانفیگ ساخته خواهد شد:
+
+```
+php artisan vendor:publish --provider=Hsyir\\SimotelConnect\\SimotelApiServiceProvider
+```
+
 
 <div dir=rtl>
 
