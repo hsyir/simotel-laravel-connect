@@ -32,17 +32,32 @@ php artisan vendor:publish --provider=Hsyir\\SimotelConnect\\SimotelApiServicePr
 
 ## Simotel Api
 Simotel Api یکی از قابلیت های قدرتمند نرم افزار سیموتل است، بوسیله این Api میتوان برخی اعمال تعریف شده روی سیموتل را از راه دور و بوسیله فریمورک قدرتمند لاراول انجام داد.    
+
+#### اتصال به سیموتل
+
+برای تعریف آدرس سرور سیموتل و اطلاعات ورود در فایل کانفیگ simotel.php مقادیر زیر را تغییر دهید:
+
+
 </div> 
-   
+
 ```php
-boolean addToQueue($queue, $source, $agent, $penalty = 0)
-boolean removeFromQueue($queue, $agent)
-boolean pauseInQueue($queue, $agent)
-boolean resumeInQueue($queue, $agent)
+
+"simotelApi" => [
+        "apiUrl" => "http://185.141.213.130/api/v1/",
+        "user" => env("SIMOTEL_API_USER", "user"),
+        "pass" => env("SIMOTEL_API_PASS", "pass"),
+    ],
+
 ```
 
-   Usage:
 
+<div dir=rtl>
+
+#### نحوه استفاده
+
+</div> 
+
+   
 ```php
 $simotelApi = new \Hsy\SimotelConnect\SimotelApi();
 $result = $simotelApi->pauseInQueue($queue, $agent);
@@ -50,6 +65,22 @@ $result = $simotelApi->pauseInQueue($queue, $agent);
 if(!$result)
     $errorMessage = $simotelApi->getMessage(); 
 ```    
+
+
+<div dir=rtl>
+
+#### متد ها
+
+</div> 
+
+```php
+boolean addToQueue($queue, $source, $agent, $penalty = 0)
+boolean removeFromQueue($queue, $agent)
+boolean pauseInQueue($queue, $agent)
+boolean resumeInQueue($queue, $agent)
+```
+
+
 
 <div dir=rtl>
 
