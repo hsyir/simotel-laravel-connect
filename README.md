@@ -78,12 +78,14 @@ Now, use the SmartApi component name defined in Simotel Dial Plan for Methods:
       
 	    public function select_queue($appData)  
 	    {  
-			$this->cmdGetData("SelectQueue", 4, 2);  
+		
+		$this->cmdGetData("SelectQueue", 4, 2);  
 	        $this->cmdExit("1");  
-	        if(true)
+	        
+		if(true)
 		        return $this->okResponse();   //
 		    else
-			    return $this->errorResponse()
+			return $this->errorResponse()
         }
 		
      }  
