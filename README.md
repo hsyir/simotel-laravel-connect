@@ -2,13 +2,11 @@
 
 # پکیح لاراول ارتباط با سیموتل
 
-</div> 
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hsyir/simotel-laravel-connect/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hsyir/simotel-laravel-connect/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/hsyir/simotel-laravel-connect/badges/build.png?b=master)](https://scrutinizer-ci.com/g/hsyir/simotel-laravel-connect/build-status/master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/hsyir/simotel-laravel-connect/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 
-<div dir=rtl>
 
 ارتباط با Simotel بوسیله لاراول
 
