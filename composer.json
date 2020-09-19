@@ -1,0 +1,26 @@
+{
+    "name": "hsyir/simotel-laravel-connect",
+    "description": "All thing you need to keep connected simotel with laravel",
+    "authors": [
+        {
+            "name": "Hossein",
+            "email": "hosseinyaghmaee@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "illuminate/support": "^6 | ^7",
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hsy\\SimotelConnect\\SimotelApiServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Hsy\\Options\\": "src/"
+        }
+    }
+}

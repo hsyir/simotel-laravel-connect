@@ -1,2 +1,2 @@
 # simotel-laravel-connect
- Evry thing you need to connected with laravel
+ All thing you need to keep connected simotel with laravel 
