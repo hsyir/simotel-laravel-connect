@@ -43,8 +43,6 @@ Simotel Event Api (SEA) سرویس انتشار رویداد های سیموتل
 
 #### نمونه Listener :
 
-پراپرتی apiData حاوی اطلاعات ارسالی از سیموتل است که به Listener ارسال می شود.
-
 </div>
 
     namespace App\Listeners;  
@@ -67,6 +65,38 @@ Simotel Event Api (SEA) سرویس انتشار رویداد های سیموتل
 	       
      }
      
+
+<div dir=rtl>
+
+پراپرتی apiData حاوی اطلاعات ارسالی از سیموتل است که به Listener ارسال می شود.
+
+
+</div>
+
+
+
+```
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
+use Hsy\SimotelConnect\SimotelEventApi;
+use Illuminate\Http\Request;
+
+class SeaController extends Controller
+{
+    public function dispatchEvent(Request $request)
+    {
+        $simotelEventApi = new  SimotelEventApi;
+        $simotelEventApi->dispatchSimotelEvent($request->all());
+    }
+}
+```
+
+
+
+
+
+
 
 
 
