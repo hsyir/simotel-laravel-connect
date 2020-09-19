@@ -20,11 +20,12 @@ Simotel Api یکی از قابلیت های قدرتمند نرم افزار س�
     if(!$result)
 	    $errorMessage = $simotelApi->getMessage(); 
 
-
+<div dir=rtl>
 ## Simotel Event Api
 Simotel Event Api (SEA) سرویس انتشار رویداد های سیموتل است. 
 این پکیج امکان استفاده از این سرویس را بوسیله قابلیت های Events و Listeners در لاراول امکان پذیر می کند.
 برای استفاده از Event های موجود در SEA می توانید از کلاس های زیر در EventServiceProvider لاراول استفاده کنید.
+</div>
 
     "Cdr" => \Hsy\SimotelConnect\Events\SimotelEventCdr::class,  
     "NewState" => \Hsy\SimotelConnect\Events\SimotelEventNewState::class,  
@@ -34,10 +35,11 @@ Simotel Event Api (SEA) سرویس انتشار رویداد های سیموتل
     "OutGoingCall" => \Hsy\SimotelConnect\Events\SimotelEventOutgoingCall::class,  
     "Transfer" => \Hsy\SimotelConnect\Events\SimotelEventTransfer::class,
 
+<div dir=rtl>
 
 #####نمونه Listener :
 پراپرتی apiData حاوی اطلاعات ارسالی از سیموتل است که به Listener ارسال می شود.
-  
+</div>
 
     namespace App\Listeners;  
       
