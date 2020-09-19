@@ -1,8 +1,7 @@
 <div dir=rtl>
 
 # پکیح لاراول ارتباط با سیموتل
-
-
+ارتباط با Simotel Api بوسیله لاراول
 
 ## Simotel Api
 Simotel Api یکی از قابلیت های قدرتمند نرم افزار سیموتل است، بوسیله این Api میتوان برخی اعمال تعریف شده روی سیموتل را از راه دور و بوسیله فریمورک قدرتمند لاراول انجام داد.    
@@ -14,16 +13,18 @@ Simotel Api یکی از قابلیت های قدرتمند نرم افزار س�
     boolean resumeInQueue($queue, $agent)
 
    Usage:
-  
-    $simotelApi = new SimotelApi();
-    $res = $simotelApi->pauseInQueue($queue, $agent)
+
+    $simotelApi = new \Hsy\SimotelConnect\SimotelApi();
+    $result = $simotelApi->pauseInQueue($queue, $agent);
     
-    if(!$res)
+    if(!$result)
 	    $errorMessage = $simotelApi->getMessage(); 
 
 
 ## Simotel Event Api
-You can listen to defined Events in this package:
+Simotel Event Api (SEA) سرویس انتشار رویداد های سیموتل است. 
+این پکیج امکان استفاده از این سرویس را بوسیله قابلیت های Events و Listeners در لاراول امکان پذیر می کند.
+برای استفاده از Event های موجود در SEA می توانید از کلاس های زیر در EventServiceProvider لاراول استفاده کنید.
 
     "Cdr" => \Hsy\SimotelConnect\Events\SimotelEventCdr::class,  
     "NewState" => \Hsy\SimotelConnect\Events\SimotelEventNewState::class,  
@@ -34,7 +35,8 @@ You can listen to defined Events in this package:
     "Transfer" => \Hsy\SimotelConnect\Events\SimotelEventTransfer::class,
 
 
-Create your listeners like bellow:
+#####نمونه Listener :
+پراپرتی apiData حاوی اطلاعات ارسالی از سیموتل است که به Listener ارسال می شود.
   
 
     namespace App\Listeners;  
