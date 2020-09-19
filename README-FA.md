@@ -113,42 +113,64 @@ class SeaController extends Controller
 
 
 
-
-
+<div dir=rtl>
 
 ## Smart Api
-First, create your **Api Methods Repository Class** and edit simotel config file:
+برای استفاده از این قابلیت ویژه نرم افزار سیموتل در فریمورک لاراول ابتدا باید یک کلاس به صورت زیر ایجاد کنید.
+برای استفاده از دستورات آماده پکیج از Trait با نام SmartApiCommands باید استفاده نمایید. 
 
-    "smartApi" => [  
+
+</div>
+
+
+
+```php
+
+namespace App\Classes;  
+         
+use Hsy\SimotelConnect\SmartApiCommands;  
+  
+class SmartApiMethodsRepo  
+{  
+    use SmartApiCommands;  
+  
+    // نام متد باید مساوی با نام کامپوننت SmartApi در نقشه تماس سیموتل باشد.
+    public function select_queue($appData)  
+    {  
+        
+        $this->cmdGetData("SelectQueue", 4, 2);  
+            $this->cmdExit("1");  
+            
+        if(true)
+            return $this->okResponse();  
+        //else
+            return $this->errorResponse();
+    }
+    
+ }
+
+```   
+
+<div dir=rtl>
+
+جهت معرفی کلاس ایجاد شده در فایل کانفیگ simotel.php مقدار زیر را تنظیم کنید.
+
+</div>
+    
+```php
+
+
+ "smartApi" => [  
       "methodsRepositoryClass" => \App\Classes\SmartApiMethodsRepo::class,  
     ],
 
-Now, use the SmartApi component name defined in Simotel Dial Plan for Methods:
-
-    namespace App\Classes;  
-         
-    use Hsy\SimotelConnect\SmartApiCommands;  
+```    
       
-    class SmartApiMethodsRepo  
-    {  
-		use SmartApiCommands;  
-      
-	    public function select_queue($appData)  
-	    {  
-		
-		$this->cmdGetData("SelectQueue", 4, 2);  
-	        $this->cmdExit("1");  
-	        
-		if(true)
-		    return $this->okResponse();  
-		//else
-		    return $this->errorResponse();
-        }
-		
-     }  
 	
 	
-
+    
+    
+    
 Available Methods:
 
   
