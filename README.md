@@ -42,17 +42,17 @@ Create your listeners like bellow:
       
     class UpdateCallCdrData  
     {        
-		/**  
-		 * Handle the event. 
-		 * 
-		 * @param object $event  
-		 * @return void  
-		 */    	     
-		 public function handle($event)  
-		 {
-			  $cdrData = $event->apiData;  
-		 }
-	     
+	   /**  
+	    * Handle the event. 
+	    * 
+	    * @param object $event  
+	    * @return void  
+	    */    	     
+	    public function handle($event)  
+	    {
+	   	  $cdrData = $event->apiData;  
+	    }
+	       
      }
      
 
@@ -82,16 +82,16 @@ Now, use the SmartApi component name defined in Simotel Dial Plan for Methods:
 	        $this->cmdExit("1");  
 	        
 		if(true)
-		        return $this->okResponse();   //
-		    else
-			return $this->errorResponse()
+		    return $this->okResponse();  
+		//else
+			return $this->errorResponse();
         }
 		
      }  
 	
 	
 
-Avalable Methods:
+Available Methods:
 
   
 	cmdPlayAnnouncement($file)  
