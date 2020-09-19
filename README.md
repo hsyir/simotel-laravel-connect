@@ -84,7 +84,7 @@ Now, use the SmartApi component name defined in Simotel Dial Plan for Methods:
 		if(true)
 		    return $this->okResponse();  
 		//else
-			return $this->errorResponse();
+		    return $this->errorResponse();
         }
 		
      }  
