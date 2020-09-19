@@ -16,7 +16,6 @@ class SimotelEventApi
     public function dispatchSimotelEvent($data)
     {
         $eventClass = config("simotel.simotelEventApi.events." . $data["event_name"]);
-        dump($eventClass);
         event(new $eventClass($data));
     }
 }
