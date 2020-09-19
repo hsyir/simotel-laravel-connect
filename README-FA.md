@@ -5,10 +5,6 @@
 
 </div> 
 
-[![Software License][ico-license]](LICENSE.md)
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads on Packagist][ico-download]][link-packagist]
-
 <div dir=rtl>
 
 # پکیح لاراول ارتباط با سیموتل
