@@ -148,6 +148,31 @@ class SmartApiMethodsRepo
 
 ```   
 
+
+<div dir=rtl>
+
+#### متدهای قابل استفاده :
+
+</div>
+	
+  
+```php
+
+cmdPlayAnnouncement($file)  
+cmdPlayback($file)  
+cmdExit($exit)  
+cmdGetData($file,$timeout,$digitsCount)  
+cmdSayDigit($number)  
+cmdSayNumber($number)  
+cmdSayClock($clock)  
+cmdSayDate($date,$calender)  
+cmdSayDuration($duration)  
+cmdSetExten($exten)  
+cmdSetLimitOnCall($seconds)  
+
+```
+
+
 <div dir=rtl>
 
 جهت معرفی کلاس ایجاد شده در فایل کانفیگ simotel.php مقدار زیر را تنظیم کنید.
@@ -192,25 +217,3 @@ class SmartApiController extends Controller
 ```
 
 
-<div dir=rtl>
-
-#### متدهای قابل استفاده :
-
-</div>
-	
-  
-```php
-
-cmdPlayAnnouncement($file)  
-cmdPlayback($file)  
-cmdExit($exit)  
-cmdGetData($file,$timeout,$digitsCount)  
-cmdSayDigit($number)  
-cmdSayNumber($number)  
-cmdSayClock($clock)  
-cmdSayDate($date,$calender)  
-cmdSayDuration($duration)  
-cmdSetExten($exten)  
-cmdSetLimitOnCall($seconds)  
-
-```
