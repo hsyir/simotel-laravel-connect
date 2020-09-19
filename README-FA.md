@@ -1,7 +1,7 @@
 <div dir=rtl>
 
 # پکیح لاراول ارتباط با سیموتل
-ارتباط با Simotel Api بوسیله لاراول
+ارتباط با Simotel بوسیله لاراول
 
 ## Simotel Api
 Simotel Api یکی از قابلیت های قدرتمند نرم افزار سیموتل است، بوسیله این Api میتوان برخی اعمال تعریف شده روی سیموتل را از راه دور و بوسیله فریمورک قدرتمند لاراول انجام داد.    
@@ -55,9 +55,6 @@ Simotel Event Api (SEA) سرویس انتشار رویداد های سیموتل
 
 ```php
 namespace App\Listeners;  
-  
-use App\Models\Call;  
-use App\User;  
   
 class UpdateCallCdrData  
 {        
@@ -135,11 +132,11 @@ class SmartApiMethodsRepo
     use SmartApiCommands;  
   
     // نام متد باید مساوی با نام کامپوننت SmartApi در نقشه تماس سیموتل باشد.
-    public function select_queue($appData)  
+    public function select_queue($apiData)  
     {  
         
         $this->cmdGetData("SelectQueue", 4, 2);  
-            $this->cmdExit("1");  
+        $this->cmdExit("1");  
             
         if(true)
             return $this->okResponse();  
@@ -167,21 +164,53 @@ class SmartApiMethodsRepo
 ```    
       
 	
-	
-    
-    
-    
-Available Methods:
+<div dir=rtl>
 
+#### نمونه Controller :
+
+</div>
+	
+```php
+
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
+use Hsy\SimotelConnect\SmartApi;
+use Illuminate\Http\Request;
+
+class SmartApiController extends Controller
+{
+    public function call(Request $request)
+    {
+        $smartApi = new SmartApi;
+        $response = $smartApi->callApi($request->all());
+        return response()->json($response);
+    }
+}
+
+
+```
+
+
+<div dir=rtl>
+
+#### متدهای قابل استفاده :
+
+</div>
+	
   
-	cmdPlayAnnouncement($file)  
-    cmdPlayback($file)  
-    cmdExit($exit)  
-    cmdGetData($file,$timeout,$digitsCount)  
-    cmdSayDigit($number)  
-    cmdSayNumber($number)  
-    cmdSayClock($clock)  
-    cmdSayDate($date,$calender)  
-    cmdSayDuration($duration)  
-    cmdSetExten($exten)  
-    cmdSetLimitOnCall($seconds)  
+```php
+
+cmdPlayAnnouncement($file)  
+cmdPlayback($file)  
+cmdExit($exit)  
+cmdGetData($file,$timeout,$digitsCount)  
+cmdSayDigit($number)  
+cmdSayNumber($number)  
+cmdSayClock($clock)  
+cmdSayDate($date,$calender)  
+cmdSayDuration($duration)  
+cmdSetExten($exten)  
+cmdSetLimitOnCall($seconds)  
+
+```
