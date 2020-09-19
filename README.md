@@ -43,7 +43,9 @@ Create your listeners like bellow:
     class UpdateCallCdrData  
     {        
 		 /**  
-		 * Handle the event. * * @param object $event  
+		 * Handle the event. 
+		 * 
+		 * @param object $event  
 		 * @return void  
 		 */    
 		     
@@ -83,7 +85,8 @@ Now, use the SmartApi component name defined in Simotel Dial Plan for Methods:
 		    else
 			    return $this->errorResponse()
         }
-	}  
+		
+     }  
 	
 	
 
