@@ -23,6 +23,6 @@ class SimotelApiServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([__DIR__ . "/../config" => config_path("simotel.php")], "config");
+        $this->publishes([__DIR__ . '/../config/simotel.php' => config_path('simotel.php'),], 'config');
     }
 }
