@@ -61,6 +61,9 @@ Simotel Event Api (SEA) سرویس انتشار رویداد های سیموتل
 	    public function handle($event)  
 	    {
 	   	  $cdrData = $event->apiData;  
+	   	  
+	   	  // 
+	   	  
 	    }
 	       
      }
@@ -79,7 +82,7 @@ Simotel Event Api (SEA) سرویس انتشار رویداد های سیموتل
 
 </div>
 
-```
+```php
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
