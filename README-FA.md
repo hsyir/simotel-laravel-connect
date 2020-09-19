@@ -7,18 +7,22 @@
 Simotel Api یکی از قابلیت های قدرتمند نرم افزار سیموتل است، بوسیله این Api میتوان برخی اعمال تعریف شده روی سیموتل را از راه دور و بوسیله فریمورک قدرتمند لاراول انجام داد.    
 </div> 
    
-    boolean addToQueue($queue, $source, $agent, $penalty = 0)
-    boolean removeFromQueue($queue, $agent)
-    boolean pauseInQueue($queue, $agent)
-    boolean resumeInQueue($queue, $agent)
+```php
+boolean addToQueue($queue, $source, $agent, $penalty = 0)
+boolean removeFromQueue($queue, $agent)
+boolean pauseInQueue($queue, $agent)
+boolean resumeInQueue($queue, $agent)
+```
 
    Usage:
 
-    $simotelApi = new \Hsy\SimotelConnect\SimotelApi();
-    $result = $simotelApi->pauseInQueue($queue, $agent);
-    
-    if(!$result)
-	    $errorMessage = $simotelApi->getMessage(); 
+```php
+$simotelApi = new \Hsy\SimotelConnect\SimotelApi();
+$result = $simotelApi->pauseInQueue($queue, $agent);
+
+if(!$result)
+    $errorMessage = $simotelApi->getMessage(); 
+```    
 
 <div dir=rtl>
 
@@ -30,13 +34,17 @@ Simotel Event Api (SEA) سرویس انتشار رویداد های سیموتل
 
 </div>
 
-    "Cdr" => \Hsy\SimotelConnect\Events\SimotelEventCdr::class,  
-    "NewState" => \Hsy\SimotelConnect\Events\SimotelEventNewState::class,  
-    "ExtenAdded" => \Hsy\SimotelConnect\Events\SimotelEventExtenAdded::class,  
-    "ExtenRemoved" => \Hsy\SimotelConnect\Events\SimotelEventExtenRemoved::class,  
-    "IncomingCall" => \Hsy\SimotelConnect\Events\SimotelEventIncomingCall::class,  
-    "OutGoingCall" => \Hsy\SimotelConnect\Events\SimotelEventOutgoingCall::class,  
-    "Transfer" => \Hsy\SimotelConnect\Events\SimotelEventTransfer::class,
+```php
+
+"Cdr" => \Hsy\SimotelConnect\Events\SimotelEventCdr::class,  
+"NewState" => \Hsy\SimotelConnect\Events\SimotelEventNewState::class,  
+"ExtenAdded" => \Hsy\SimotelConnect\Events\SimotelEventExtenAdded::class,  
+"ExtenRemoved" => \Hsy\SimotelConnect\Events\SimotelEventExtenRemoved::class,  
+"IncomingCall" => \Hsy\SimotelConnect\Events\SimotelEventIncomingCall::class,  
+"OutGoingCall" => \Hsy\SimotelConnect\Events\SimotelEventOutgoingCall::class,  
+"Transfer" => \Hsy\SimotelConnect\Events\SimotelEventTransfer::class,
+
+```
 
 
 <div dir=rtl>
@@ -45,29 +53,30 @@ Simotel Event Api (SEA) سرویس انتشار رویداد های سیموتل
 
 </div>
 
-    namespace App\Listeners;  
+```php
+namespace App\Listeners;  
+  
+use App\Models\Call;  
+use App\User;  
+  
+class UpdateCallCdrData  
+{        
+   /**  
+    * Handle the event. 
+    * 
+    * @param object $event  
+    * @return void  
+    */    	     
+    public function handle($event)  
+    {
+      $cdrData = $event->apiData;  
       
-    use App\Models\Call;  
-    use App\User;  
+      // 
       
-    class UpdateCallCdrData  
-    {        
-	   /**  
-	    * Handle the event. 
-	    * 
-	    * @param object $event  
-	    * @return void  
-	    */    	     
-	    public function handle($event)  
-	    {
-	   	  $cdrData = $event->apiData;  
-	   	  
-	   	  // 
-	   	  
-	    }
-	       
-     }
-     
+    }
+       
+ }
+```     
 
 <div dir=rtl>
 
