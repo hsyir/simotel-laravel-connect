@@ -8,11 +8,11 @@
 - [Smart Api](#smart-api)
 
 ## نصب
-
+</div> 
 ```
 composer require hsyir/simotel-laravel-connect
 ```
-
+<div dir=rtl>
 
 ## Simotel Api
 Simotel Api یکی از قابلیت های قدرتمند نرم افزار سیموتل است، بوسیله این Api میتوان برخی اعمال تعریف شده روی سیموتل را از راه دور و بوسیله فریمورک قدرتمند لاراول انجام داد.    
