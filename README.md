@@ -42,17 +42,17 @@ Create your listeners like bellow:
       
     class UpdateCallCdrData  
     {        
-		 /**  
-		 * Handle the event. 
-		 * 
-		 * @param object $event  
-		 * @return void  
-		 */    
-		     
-	     public function handle($event)  
-	     {
-		      $cdrData = $event->apiData;  
-	     }
+	/**  
+	 * Handle the event. 
+	 * 
+	 * @param object $event  
+	 * @return void  
+	 */    
+	     
+	 public function handle($event)  
+	 {
+	      $cdrData = $event->apiData;  
+	 }
 	     
      }
      
