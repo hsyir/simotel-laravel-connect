@@ -107,4 +107,19 @@ trait SmartApiCommands
     {
         $this->addCommand("SayDuration('$duration'");
     }
+
+    /*
+    *
+    */
+    private function cmdSetExten($exten)
+    {
+        $this->addCommand("SetExten('$exten')");
+    }
+    /*
+     *
+     */
+    private function cmdSetLimitOnCall($seconds)
+    {
+        $this->addCommand("SetLimitOnCall($seconds)");
+    }
 }
