@@ -50,7 +50,7 @@ Simotel Api یکی از قابلیت های قدرتمند نرم افزار س�
 ```php
 
 "simotelApi" => [
-        "apiUrl" => "http://185.141.213.130/api/v1/",
+        "apiUrl" => env("SIMOTEL_API_SERVER", "http://127.0.0.1/api/v1/"),
         "user" => env("SIMOTEL_API_USER", "user"),
         "pass" => env("SIMOTEL_API_PASS", "pass"),
     ],
