@@ -105,7 +105,7 @@ trait SmartApiCommands
      */
     private function cmdSayDuration($duration)
     {
-        $this->addCommand("SayDuration('$duration'");
+        $this->addCommand("SayDuration('$duration')");
     }
 
     /*
