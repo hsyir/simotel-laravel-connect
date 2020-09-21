@@ -40,11 +40,12 @@ php artisan vendor:publish --provider=Hsyir\\SimotelConnect\\SimotelApiServicePr
 
 ## سازگاری با سیموتل
 
+</div> 
+
 | ورژن پکیج لاراول|  ورژن نرم افزار سیموتل |
 |---|---|
 | 1.*  |  5.2.5 |
 
-</div> 
 
 <div dir=rtl>
 
