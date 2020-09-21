@@ -11,7 +11,7 @@
 ارتباط با Simotel بوسیله لاراول
 
 - [نصب](#نصب)
-- [سازگاری با سیموتل](#simotel-api)
+- [سازگاری با سیموتل](#سازگاری-با-سیموتل)
 - [Simotel Api](#simotel-api)
 - [Simotel Event Api](#simotel-event-api)
 - [Smart Api](#smart-api)
