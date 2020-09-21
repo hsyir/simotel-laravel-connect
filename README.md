@@ -11,6 +11,7 @@
 ارتباط با Simotel بوسیله لاراول
 
 - [نصب](#نصب)
+- [سازگاری با سیموتل](#simotel-api)
 - [Simotel Api](#simotel-api)
 - [Simotel Event Api](#simotel-event-api)
 - [Smart Api](#smart-api)
@@ -34,6 +35,16 @@ composer require hsyir/simotel-laravel-connect
 php artisan vendor:publish --provider=Hsyir\\SimotelConnect\\SimotelApiServiceProvider
 ```
 
+
+<div dir=rtl>
+
+## سازگاری با سیموتل
+
+| ورژن پکیج لاراول|  ورژن نرم افزار سیموتل |
+|---|---|
+| 1.*  |  5.2.5 |
+
+</div> 
 
 <div dir=rtl>
 
