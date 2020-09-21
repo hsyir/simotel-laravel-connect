@@ -116,7 +116,7 @@ trait SmartApiCommands
         $this->addCommand("SetExten('$exten')");
     }
     /*
-     *
+     * Set limit on call
      */
     private function cmdSetLimitOnCall($seconds)
     {
