@@ -1,25 +1,39 @@
 {
-    "name": "hsyir/simotel-laravel-connect",
-    "description": "All thing you need to keep connected simotel with laravel",
-    "authors": [
-        {
-            "name": "Hossein",
-            "email": "hosseinyaghmaee@gmail.com"
-        }
-    ],
-    "require": {
-        "php": "^7.2.5"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Hsy\\SimotelConnect\\SimotelApiServiceProvider"
-            ]
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "Hsy\\SimotelConnect\\": "src/"
-        }
+  "name": "hsyir/simotel-laravel-connect",
+  "description": "All thing you need to keep connected simotel with laravel",
+  "authors": [
+    {
+      "name": "Hossein",
+      "email": "hosseinyaghmaee@gmail.com"
     }
+  ],
+  "require": {
+    "php": "^7.2.5",
+    "hsyir/simotel-php-connect": "^1.0",
+    "illuminate/support": "^5.0|^6.0|^7.0|^8.0",
+    "illuminate/broadcasting": "^5.0|^6.0|^7.0|^8.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^4.0 | ^5.1"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Hsy\\SimotelConnect\\SimotelApiServiceProvider"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Hsy\\LaraSimotel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Hsy\\LaraSimotel\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
 }
