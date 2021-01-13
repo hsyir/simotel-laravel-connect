@@ -1,6 +1,6 @@
 <?php
 
-namespace Hsy\SimotelConnect\Events;
+namespace Hsy\LaraSimotel\Events;
 
 
 class SimotelEventNewState extends SimotelEvent

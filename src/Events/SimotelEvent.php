@@ -1,6 +1,6 @@
 <?php
 
-namespace Hsy\SimotelConnect\Events;
+namespace Hsy\LaraSimotel\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
