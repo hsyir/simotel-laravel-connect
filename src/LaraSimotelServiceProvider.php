@@ -2,8 +2,13 @@
 
 namespace Hsy\LaraSimotel;
 
+use Hsy\LaraSimotel\Events\SimotelEventCdr;
 use Hsy\Simotel\Simotel;
 use Illuminate\Support\ServiceProvider;
+use Shetabit\Multipay\Payment;
+use Shetabit\Payment\Events\InvoicePurchasedEvent;
+use Shetabit\Payment\Events\InvoiceVerifiedEvent;
+use Hsy\LaraSimotel\Facades\Simotel as SimotelFacade;
 
 class LaraSimotelServiceProvider extends ServiceProvider
 {
@@ -14,8 +19,8 @@ class LaraSimotelServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->mergeConfigFrom(Simotel::getDefaultConfigPath(), "simotel");
 
-        $this->mergeConfigFrom(Simotel::getDefaultConfigPath(),"simotel");
         /**
          * Bind to service container.
          */
@@ -26,6 +31,7 @@ class LaraSimotelServiceProvider extends ServiceProvider
         });
 
         $this->registerEvents();
+
     }
 
     /**
@@ -46,8 +52,20 @@ class LaraSimotelServiceProvider extends ServiceProvider
         );
     }
 
-    private function registerEvents()
-    {
 
+    /**
+     * Register Laravel events.
+     *
+     * @return void
+     */
+    public function registerEvents()
+    {
+        $events = ["Cdr", "ExtenAdded", "ExtenRemoved", "IncomingCall", "NewState", "OutgoingCall", "Transfer"];
+        array_walk($events, function ($event) {
+            SimotelFacade::eventApi()->addListener($event, function ($data) use ($event) {
+                $eventClass = "Hsy\\LaraSimotel\\Events\\SimotelEvent" . $event;
+                event(new $eventClass($data));
+            });
+        });
     }
 }
