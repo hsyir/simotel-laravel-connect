@@ -14,7 +14,8 @@
     "illuminate/broadcasting": "^5.0|^6.0|^7.0|^8.0"
   },
   "require-dev": {
-    "orchestra/testbench": "^4.0 | ^5.1"
+    "orchestra/testbench": "^4.0 | ^5.1",
+    "ext-json": "*"
   },
   "extra": {
     "laravel": {
