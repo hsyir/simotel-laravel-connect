@@ -19,7 +19,7 @@ class LaraSimotelServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(Simotel::getDefaultConfigPath(), "simotel");
+        $this->mergeConfigFrom(__DIR__ . "/../config/simotel.php", "simotel");
 
         /**
          * Bind to service container.
@@ -46,7 +46,7 @@ class LaraSimotelServiceProvider extends ServiceProvider
          */
         $this->publishes(
             [
-                Simotel::getDefaultConfigPath() => config_path('simotel.php'),
+                __DIR__ . "/../config/simotel.php" => config_path('simotel.php'),
             ],
             'config'
         );
