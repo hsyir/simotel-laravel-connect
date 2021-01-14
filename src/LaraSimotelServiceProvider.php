@@ -60,12 +60,15 @@ class LaraSimotelServiceProvider extends ServiceProvider
      */
     public function registerEvents()
     {
-        $events = ["Cdr", "ExtenAdded", "ExtenRemoved", "IncomingCall", "NewState", "OutgoingCall", "Transfer"];
+        //["Cdr", "ExtenAdded", "ExtenRemoved", "IncomingCall", "NewState", "OutgoingCall", "Transfer"]
+        $events = array_keys(config("simotel.simotelEventApi.events"));
+
         array_walk($events, function ($event) {
             SimotelFacade::eventApi()->addListener($event, function ($data) use ($event) {
-                $eventClass = "Hsy\\LaraSimotel\\Events\\SimotelEvent" . $event;
+                $eventClass = config("simotel.simotelEventApi.events." . $event);
                 event(new $eventClass($data));
             });
         });
+
     }
 }
